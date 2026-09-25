@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/decodo",
   "title": "Decodo",
   "description": "Decodo MCP — wraps the Decodo Web Scraping API (decodo.com, formerly",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pipeworx.io/packs/decodo",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-decodo",
