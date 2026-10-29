@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-decodo",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Decodo MCP — wraps the Decodo Web Scraping API (decodo.com, formerly Smartproxy). Rotating residential/datacenter proxies + headless-browser rendering + structured parsers for popular targets.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-decodo": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "decodo"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-decodo.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/decodo",
   "pipeworx": {
-    "sourceHash": "v1-51db32fe76143bc8462bb961fa06d739718430f3ee6c682477298a161ee3d77d",
-    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
+    "mode": "gateway",
+    "slug": "decodo",
+    "gatewaySlug": "decodo",
+    "sourceHash": "v1-241f126b617e5b53a5d0eb91ee9cf56e7f53d2d6c600f80a008e5661d8fa88e5",
+    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
   }
 }
